@@ -1,0 +1,15 @@
+{
+  "name": "simulated-device",
+  "version": "1.0.0",
+  "description": "",
+  "main": "device.js",
+  "scripts": {
+    "start": "node device.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "azure-iot-device": "^1.8.1",
+    "azure-iot-device-http": "^1.8.1"
+  }
+}

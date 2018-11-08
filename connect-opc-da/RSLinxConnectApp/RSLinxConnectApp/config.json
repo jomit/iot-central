@@ -1,0 +1,10 @@
+{
+  "opcServerUrl": "opcda://localhost/RSLinx Remote OPC Server/{GUID}",
+  "topicItems": [
+    {
+      "name": "[Topic]Item",
+      "deviceConnectionString": "<iot central device connectionstring>",
+      "deviceTelemetryFieldName": "<fieldname from iot central>"
+    }
+  ]
+}

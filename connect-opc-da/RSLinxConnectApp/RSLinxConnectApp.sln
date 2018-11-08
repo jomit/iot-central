@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSLinxConnectApp", "RSLinxConnectApp\RSLinxConnectApp.csproj", "{DA35C241-D3F1-4769-948F-B78A0CC1B0CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA35C241-D3F1-4769-948F-B78A0CC1B0CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA35C241-D3F1-4769-948F-B78A0CC1B0CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA35C241-D3F1-4769-948F-B78A0CC1B0CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA35C241-D3F1-4769-948F-B78A0CC1B0CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F83CB6E-B5A2-4903-A268-C9DEB6C572AB}
+	EndGlobalSection
+EndGlobal
