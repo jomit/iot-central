@@ -1,0 +1,21 @@
+version: '3'
+services:
+    opcplc:
+        image: mcr.microsoft.com/iotedge/opc-plc:latest
+        container_name: opcplc
+        hostname: opcplc
+        ports:
+            - "50000:50000"
+        command: --aa
+    publisher:
+        image: mcr.microsoft.com/iotedge/opc-publisher:latest
+        container_name: publisher
+        depends_on:
+            - opcplc
+        hostname: publisher
+        volumes:
+            - '${_REPO_ROOT}:/appdata'
+        ports:
+            - "62222:62222"
+        command: publisher --aa --pf /appdata/publishednodes.json --iotcentral --deviceconnectionstring=${_DEVICE_CS}
+
