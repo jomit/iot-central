@@ -1,5 +1,6 @@
-# Sample code + scripts to develop Azure IoT Central Solutions 
+# Developing Azure IoT Central Solutions 
 
+- [OPC UA Demo](https://github.com/jomit/iot-central/tree/master/opc-ua-demo)
 
 - [Connect with RSLinx (OPC DA)](https://github.com/jomit/iot-central/blob/master/connect-opc-da)
 
