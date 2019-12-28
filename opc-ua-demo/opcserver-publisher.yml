@@ -17,5 +17,4 @@ services:
             - '${_REPO_ROOT}:/appdata'
         ports:
             - "62222:62222"
-        command: publisher --aa --pf /appdata/publishednodes.json --iotcentral --deviceconnectionstring=${_DEVICE_CS}
-
+        command: publisher --aa --pf /appdata/publishednodes.json --iotcentral=True --fetchdisplayname=True --iothubmessagesize=0 --iothubsendinterval=0 --diagnosticsinterval=10 --deviceconnectionstring=${_DEVICE_CS}

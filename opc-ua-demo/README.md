@@ -56,3 +56,8 @@
 - Observe the Telemetry Chart in IoT Central. 
 
     ![Device Telemetry](https://raw.githubusercontent.com/jomit/iot-central/master/images/device-telemetry.png)
+
+- or use [IoT Central explorer](https://docs.microsoft.com/en-us/azure/iot-central/core/howto-use-iotc-explorer) to view the messages.
+
+    - `iotc-explorer login "<access token>"`
+    - `iotc-explorer monitor-messages`
