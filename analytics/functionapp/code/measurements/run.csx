@@ -71,15 +71,36 @@ public static async Task Run(CloudBlockBlob myBlob, TraceWriter log, ExecutionCo
                             {
                                 try
                                 {
-                                    var body = JsonSerializer.Create().Deserialize(streamReader, typeof(IDictionary<string, dynamic>)) as IDictionary<string, dynamic>;
-                                    messages.Add(new Message
+                                    var content = streamReader.ReadToEnd();
+
+                                    //test for array
+                                    if (content.StartsWith("["))
                                     {
-                                        messageId = messageId,
-                                        timestamp = enqueueTime,
-                                        deviceId = deviceId,
-                                        values = body,
-                                        messageSize = (int)stream.Length
-                                    });
+                                        var bodyList = JsonConvert.DeserializeObject<IList<IDictionary<string, dynamic>>>(content);
+                                        foreach(var body in bodyList)
+                                        {
+                                            messages.Add(new Message
+                                            {
+                                                messageId =  Guid.NewGuid(),
+                                                timestamp = msgTime,
+                                                deviceId = deviceId,
+                                                values = body,
+                                                messageSize = (int)stream.Length
+                                            });
+                                        }
+                                    }
+                                    else
+                                    {
+                                        var body = JsonConvert.DeserializeObject<IDictionary<string, dynamic>>(content);
+                                        messages.Add(new Message
+                                        {
+                                            messageId =  Guid.NewGuid(),
+                                            timestamp = msgTime,
+                                            deviceId = deviceId,
+                                            values = body,
+                                            messageSize = (int)stream.Length
+                                        });
+                                    }
                                 }
                                 catch (Exception e)
                                 {
